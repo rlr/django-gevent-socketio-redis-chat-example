@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type=text/css href="{{ STATIC_URL }}css/reset.css">
+  <link rel="stylesheet" type=text/css href="{{ STATIC_URL }}css/style.css">
+</head>
+<body>
+  <header>
+  </header>
+  <div id="main">
+    {% block content %}{% endblock %}
+  </div>
+  <footer>
+  </footer>
+  <script type="text/javascript">
+    // auto initialization triggers a request for the .swf even if I don't
+    // enable flash sockets :-/
+    WEB_SOCKET_DISABLE_AUTO_INITIALIZATION = true;
+  </script>
+  <script src="{{ STATIC_URL }}js/libs/jquery.min.js" type="text/javascript"></script>
+  <script src="{{ STATIC_URL }}js/libs/socket.io.js" type="text/javascript"></script>
+  {% block more_scripts %}{% endblock %}
+</body>
+</html>

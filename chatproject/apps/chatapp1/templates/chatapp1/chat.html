@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}chatapp1{% endblock %}
+
+{% block content %}
+  <p>chatapp1</p>
+  <section>
+    <div id="chat-box"></div>
+    <form id="chat-form">
+      <input type="text" name="message" placeholder="Enter message" />
+      <input type="submit" value="Send" />
+    </form>
+  </section>
+  <aside>
+    TODO: user list and rooms
+    <ul id="chat-rooms"></ul>
+  </aside>
+{% endblock %}
+
+{% block more_scripts %}
+  <script src="{{ STATIC_URL }}js/chatapp1.js" type="text/javascript"></script>
+{% endblock %}

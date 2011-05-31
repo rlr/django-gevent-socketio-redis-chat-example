@@ -1,0 +1,4 @@
+*.py[co]
+pip-log.txt
+dev.db
+
