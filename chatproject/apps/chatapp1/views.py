@@ -17,7 +17,7 @@ def socketio(request):
     redis_sub = redis_client().pubsub()
     user = username(request.user)
 
-    # Subscribe to incoming pubsub messages from redis
+    # Subscribe to incoming pubsub messages from redis.
     def subscriber(io):
         redis_sub.subscribe(room_channel())
         redis_client().publish(room_channel(), user + ' connected.')
@@ -27,7 +27,7 @@ def socketio(request):
                     io.send(message['data'])
     greenlet = Greenlet.spawn(subscriber, io)
 
-    # Listen to incoming messages from client
+    # Listen to incoming messages from client.
     while io.connected():
         message = io.recv()
         if message:

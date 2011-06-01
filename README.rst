@@ -10,7 +10,7 @@ Installation
 ------------
 
 Note: you probably want to create and activate a virtualenv before
-running installing the requirements below. I use and like virtualenvwrapper_.
+installing the requirements below. I use and like virtualenvwrapper_.
 
 .. _virtualenvwrapper: http://www.doughellmann.com/docs/virtualenvwrapper/
 
@@ -49,4 +49,4 @@ TODO/Wishlist
 * Private/1:1 chat
 * Experiment posting messages outside of socket.io connection. This way we can
   limit the socket.io connection to pubsub messages and all blocking calls
-  (to database, etc.) can be made in through the normal django/wsgi stack.
+  (to database, etc.) can be made through the normal django/wsgi stack.
