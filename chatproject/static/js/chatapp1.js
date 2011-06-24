@@ -5,7 +5,7 @@
 
 function init() {
     var s = new io.Socket(window.location.hostname, {
-      port: 8000,
+      port: 9000,
       rememberTransport: false,
       //transports: ['xhr-multipart', 'xhr-polling'],
       resource: 'socket.io'
